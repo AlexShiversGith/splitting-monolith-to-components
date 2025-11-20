@@ -1,38 +1,40 @@
+import Button from "./Button"
+
 const Content = () => {
   return (
     <main className="component-showcase">
         <section className="component-group">
           <h2>Variants</h2>
           <div className="component-card">
-            <button className="button primary">Primary</button>
-            <button className="button secondary">Secondary</button>
-            <button className="button danger">Danger</button>
-            <button className="button gradient">Gradient</button>
-            <button className="button outline">Outline</button>
+            <Button variant="primary" children="primary"/>
+            <Button variant="secondary" children="secondary"/>
+            <Button variant="danger" children="danger"/>
+            <Button variant="gradient" children="gradient"/>
+            <Button variant="outline" children="outline"/>
           </div>
         </section>
 
         <section className="component-group">
           <h2>Sizes</h2>
           <div className="component-card">
-            <button className="button small primary">Small</button>
-            <button className="button medium primary">Medium</button>
-            <button className="button large primary">Large</button>
+            <Button size="small" variant="primary" children="small"/>
+            <Button size="medium" variant="primary" children="medium"/>
+            <Button size="large" variant="primary" children="large"/>
           </div>
         </section>
 
         <section className="component-group">
           <h2>Button States</h2>
           <div className="component-card">
-            <button className="button primary">Default</button>
-            <button className="button primary disabled">Disabled</button>
+            <Button variant="primary" children="default"/>
+            <Button variant="primary" isDisabled={true} children="disabled"/>
           </div>
         </section>
 
         <section className="component-group">
           <h2>Full Width Button</h2>
           <div className="component-card">
-            <button className="button secondary full-width">Full Width</button>
+            <Button variant="secondary" fullWidth={true} children="full width"/>
           </div>
         </section>
       </main>
